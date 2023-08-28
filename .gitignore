@@ -1,0 +1,9 @@
+data/GO/*
+build/
+NetAn.egg-info/
+!data/GO/GO_clean.csv
+data/STRINGdb/*
+!./data/STRINGdb/clean_string.csv
+*.pyc
+
+
