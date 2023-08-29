@@ -4,6 +4,9 @@ import sklearn.cluster
 import networkx as nx
 import scipy.stats as sts
 import os
+import os.path
+import tarfile
+
 
 __author__ = 'Rasmus Magnusson'
 __COPYRIGHT__ = 'Copyright (C) 2023 Rasmus Magnusson'
@@ -14,7 +17,11 @@ np.random.seed(0)
 
 def load_nw(nw, cutoff=0):
     if nw == 'STRINGdb':
-        df = pd.read_csv(PATH + 'data/STRINGdb/clean_string.csv')
+        tmppath = PATH + 'data/STRINGdb/clean_string.csv'
+        if not os.path.isfile(tmppath):
+            file = tarfile.open(PATH + 'data/STRINGdb/clean_string.tar.gz')
+            file.extractall(PATH + 'data/STRINGdb/')
+        df = pd.read_csv(tmppath)
         df = df.set_index('p1')
         df = df[df.score >= cutoff]
     return df

@@ -50,6 +50,7 @@ cluster_res = enr.enrich(gene_set='start_genes',
 
 # to print the inferred target genes
 print(enr.target_genes)
+```
 
 Contributor:
 =============
