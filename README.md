@@ -31,7 +31,7 @@ Python Version Supported/Tested
 
 Usage:
 ======
-Here are the basic usages of the TFTenricher. A more comprehensive example can e found as a Jupyter notebook in the ./doc/ folder
+Here are the basic usages of the NetAn. A more comprehensive example can e found as a Jupyter notebook in the ./doc/ folder
 
 In python:
 ```python
